@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './Chat.css'
 import { Avatar, IconButton } from '@mui/material'
 import { AttachFile, InsertEmoticon, Mic, MoreVert, SearchOutlined } from '@mui/icons-material';
+import { useParams } from 'react-router-dom';
 
 function Chat() {
     const [input, setInput] = useState("");
     const [seed, setSeed] = useState('');
+    const {roomId} = useParams();
 
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 5000));
@@ -14,6 +16,7 @@ function Chat() {
     const sendMessage = (e) => {
         e.preventDefault();
         console.log('You typed >>>', input);
+        setInput('')
     };
 
   return (
