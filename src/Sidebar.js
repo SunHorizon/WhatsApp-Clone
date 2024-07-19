@@ -3,7 +3,7 @@ import './Sidebar.css'
 import { Avatar, IconButton } from "@mui/material";
 import { Chat, DonutLarge, MoreVert, SearchOutlined } from "@mui/icons-material";
 import SidebarChat from "./SidebarChat";
-import db from "./firebase-db";
+import db from "./firebase";
 
 
 function Sidebar(){
